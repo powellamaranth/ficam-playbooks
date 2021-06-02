@@ -58,6 +58,8 @@ These announcements and hot topic concern Federal Public Key Infrastructure chan
           <td>{{ announcement.pubDate }}</td>
           <td>{{ announcement.description }}</td>
         </tr>
+      {% endif %}
+     {% endfor %}
     {% endfor %}
   </tbody>
 </table>
