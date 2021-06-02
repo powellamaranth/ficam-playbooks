@@ -13,7 +13,28 @@ subnav:
     href: ../announcements/2019fpkimigration/
 ---
 
+{% assign categories = "" | split: "" %}
+{% for guide in site.fpkiannouncements %}
+  {% assign categoryName = guide.category | strip %}
+  {% assign categories = categories | push: categoryName | uniq | sort %}
+{% endfor %}
+{% assign categories = categories | uniq | sort %}
+
 These announcements and hot topic concern Federal Public Key Infrastructure changes that may affect your agency's operations. Announcements are archived after one year and removed after three years.
+
+<div class="usa-width-one-fourth">
+  <fieldset class="usa-fieldset-inputs guides-filter">
+    <legend>Status</legend>
+    <ul class="usa-unstyled-list">
+      {% for category in categories %}
+      <li>
+        <input class="guides-filter-category" id="category-{{ category | slugify }}" type="checkbox" name="categories" value="{{ category }}" checked>
+        <label for="category-{{ category | slugify }}">{{ category }}</label>
+      </li>
+      {% endfor %}
+    </ul>
+  </fieldset>
+</div>
 
 <table class="usa-table--borderless announce-table">
   <thead class="usa-sr-only">
@@ -25,8 +46,12 @@ These announcements and hot topic concern Federal Public Key Infrastructure chan
     </tr>
   </thead>
   <tbody>
-    {% assign announcements = site.fpki.announcements | concat: site.data.fpkiannouncements| sort: "status" %}
-    {% for announcement in announcements %}
+    {% for category in categories %}
+        <tr class="guides-table-category-heading" data-category="{{ category }}">
+          <th colspan="4" class="guides-table-heading" id="guides-table-heading-{{ category | slugify }}"><b>{{ category }} Status</b></th>
+        </tr>
+        {% for guide in site.fpkiannouncements %}
+          {% if guide.category == category %}
         <tr class="announce-table-row">
           <td><a href="{{ announcement.url | relative_url }}">{{ announcement.title }}</a></td>
           <td>{{ announcement.status }}</td>
