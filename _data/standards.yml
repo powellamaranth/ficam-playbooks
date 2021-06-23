@@ -1,0 +1,16 @@
+# List of all relevant standards and policies
+
+# categories: Laws, Standards, Policies, Guidance, Other
+# topic (applicable pages): Arch, FPKI, PACS, PIV, PM
+
+- category: Laws
+  Name: The Privacy Act of 1974
+  Topic: PM
+  URL: http://www.gpo.gov/fdsys/pkg/USCODE-2012-title5/pdf/USCODE-2012-title5-partI-chap5-subchapII-sec552a.pdf
+  Description: This Act protects certain Federal Government records pertaining to individuals. In particular, the Act covers systems of records that an agency maintains and retrieves by an individual’s name or other personal identifier, such as a Social Security Number.
+
+- category: Standards
+  Name: NIST SP 800-116 Rev. 1: Guidelines for the Use of PIV Credentials in Facility Access
+  Topic: PACS
+  URL: https://csrc.nist.gov/publications/detail/sp/800-116/rev-1/final
+  Description: This guideline provides resources for using PIV credentials in facility access; enabling federal agencies to operate as government-wide interoperable enterprises. This guideline covers the risk-based strategy to select appropriate PIV authentication mechanisms as expressed within FIPS 201.
