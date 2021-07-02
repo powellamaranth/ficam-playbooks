@@ -18,6 +18,7 @@ permalink: /playbooks/
   <tbody>
     {% assign playbooks = site.playbooks | concat: site.data.external_playbooks |sort :"%Y" | reverse %} 
     {% for playbook in playbooks %}
+    {% playbook.pubdate| sort:%Y| reverse %}
         <tr class="playbooks-table-row">
           <td><a href="{{ playbook.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ playbook.title }}</a></td>
           <td>{{ playbook.type }}</td>
