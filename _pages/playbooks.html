@@ -5,14 +5,14 @@ permalink: /playbooks/
 ---
 
 <p>A playbook is a comprehensive guide on a technical topic, describing both overarching strategy and tactical approaches. The below table is sorted by title.</p>
-<!-- 
+
 <table id="mytable">
   <thead>
     <tr>
-      <th id="playbooks-table-heading-title" scope="col">Title</th>
-      <th id="playbooks-table-heading-type" scope="col">Type</th>
-      <th id="playbooks-table-heading-date" scope="col" id="sortpubdateID">Latest Update</th>
-      <th id="playbooks-table-heading-description" scope="col">Description</th>
+      <th id="playbooks-table-heading-title" scope="col" onclick="sortTable(0)">Title</th>
+      <th id="playbooks-table-heading-type" scope="col" onclick="sortTable(1)">Type</th>
+      <th id="playbooks-table-heading-date" scope="col"onclick="sortTable(2)">Latest Update</th>
+      <th id="playbooks-table-heading-description" scope="col" onclick="sortTable(3)">Description</th>
     </tr>
   </thead>
   <tbody>
@@ -27,7 +27,8 @@ permalink: /playbooks/
     {% endfor %}
   </tbody>
 </table>
--->
+
+<!-- 
 <table id="table">
   <tr>
     <th onclick="sortTable(0)">Nummer</th>
@@ -50,7 +51,7 @@ permalink: /playbooks/
     <td>Peter</td>
   </tr>
 </table>
-
+-->
 <script>
 
 function sortTable(n) {
