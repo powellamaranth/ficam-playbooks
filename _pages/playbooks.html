@@ -20,35 +20,60 @@ permalink: /playbooks/
     {% assign arrayTitle = '' | split: '' %}
     {% assign arrayDate= '' | split: '' %}
 
-    {% assign counter = 0 -%}
     {% for playbook in playbooks %}
     
-    {% assign arrayTitle = arrayTitle | push: playbook.title %}
+    <!--{% assign arrayTitle = arrayTitle | push: playbook.title %}
     {% assign arrayDate = arrayDate | push: playbook.pubdate %}
-    <tr class="playbooks-table-row"></tr>
-    
-
-    {% for outputTitle in arrayTitle %}
-    <td><a href="{{ playbook.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ outputTitle }}</a></td>
-    {% assign counter = outputTitle | plus: 1 %}
     {%endfor%}
-    
-  
+
+    {% for playbook in playbooks %}-->
+
+
       
+        <tr class="playbooks-table-row"></tr>
+      
+          <td><a href="{{ playbook.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ playbook.title }}</a></td>
+       
+          <td>{{ playbook.type }}</td>
+        
+          <td>{{ playbook.pubdate| date: "%m/%Y" }}</td>
+       
+          <td>{{ playbook.description }}</td>
+        </tr>
+
+       
+
+    {% endfor %}
+
+     
     
-    <td>{{ playbook.type }}</td>
-  
-    <td>{{ playbook.pubdate| date: "%m/%Y" }}</td>
- 
-    <td>{{ playbook.description }}</td>
-  </tr>
-
- 
-    {%endfor%}
-
   </tbody>
 </table>
 
+<!-- 
+<table id="table">
+  <tr>
+    <th onclick="sortTable(0)">Nummer</th>
+    <th onclick="sortTable(1)">Land</th>
+    <th onclick="sortTable(2)">Name</th>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Rumänien</td>
+    <td>Dan</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Deutschland</td>
+    <td>Aaron</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>USA</td>
+    <td>Peter</td>
+  </tr>
+</table>
+-->
 <script>
 
 function sortTable(n) {
