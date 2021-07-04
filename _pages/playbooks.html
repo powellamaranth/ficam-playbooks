@@ -9,9 +9,9 @@ permalink: /playbooks/
 <table id="table">
   <thead>
     <tr>
-      <th id="playbooks-table-heading-title" scope="col" onclick="sortTable(1)">Title</th>
+      <th id="playbooks-table-heading-title" scope="col" onclick="sortTable(0)">Title</th>
       <th id="playbooks-table-heading-type" scope="col">Type</th>
-      <th id="playbooks-table-heading-date" scope="col"onclick="sortTable(2)">Latest Update</th>
+      <th id="playbooks-table-heading-date" scope="col"onclick="sortTable(0)">Latest Update</th>
       <th id="playbooks-table-heading-description" scope="col" >Description</th>
     </tr>
   </thead>
@@ -19,10 +19,10 @@ permalink: /playbooks/
     {% assign playbooks = site.playbooks | concat: site.data.external_playbooks | sort: "pubdate" | reverse %} 
     {% for playbook in playbooks %}
         <tr class="playbooks-table-row">
-          <td><a href="{{ playbook.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ playbook.title [0] }}</a></td>        
-          <td>{{ playbook.type[0]}}</td>
-          <td>{{ playbook.pubdate[0] | date: "%m/%Y" }}</td>
-          <td>{{ playbook.description[0] }}</td>
+          <td><a href="{{ playbook.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ playbook.title }}</a></td>
+          <td>{{ playbook.type }}</td>
+          <td>{{ playbook.pubdate | date: "%m/%Y" }}</td>
+          <td>{{ playbook.description }}</td>
         </tr>
     {% endfor %}
   </tbody>
