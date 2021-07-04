@@ -26,9 +26,9 @@ permalink: /playbooks/
     {% assign arrayDate = arrayDate | push: playbook.pubdate %}
     {%endfor%}
 
-    {%  playbook2 = playbook | concat: arrayTitle | concat:ArrayDate %}
+    
 
-    {% For i in playbook2 %}
+    {% for i in playbook2 %}
 
 
       
