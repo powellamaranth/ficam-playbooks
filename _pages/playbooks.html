@@ -9,27 +9,21 @@ permalink: /playbooks/
 <table id="table">
   <thead>
     <tr>
-      <th id="playbooks-table-heading-title" scope="col" onclick="sortTable(0)">Title</th>
-      <th id="playbooks-table-heading-type" scope="col" onclick="sortTable(1)">Type</th>
-      <th id="playbooks-table-heading-date" scope="col"onclick="sortTable(2)">Latest Update</th>
-      <th id="playbooks-table-heading-description" scope="col" onclick="sortTable(3)">Description</th>
+      <th id="playbooks-table-heading-title" scope="col" onclick="sortTable(1)">Title</th>
+      <th id="playbooks-table-heading-type" scope="col">Type</th>
+      <th id="playbooks-table-heading-date" scope="col"onclick="sortTable(0)">Latest Update</th>
+      <th id="playbooks-table-heading-description" scope="col" >Description</th>
     </tr>
   </thead>
   <tbody>
-    {% assign playbooks = site.playbooks | concat: site.data.external_playbooks %} 
+    {% assign playbooks = site.playbooks | concat: site.data.external_playbooks%} 
     {% for playbook in playbooks %}
         <tr class="playbooks-table-row">
           <td><a href="{{ playbook.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ playbook.title }}</a></td>
-        </tr>
-        <tr>
           <td>{{ playbook.type }}</td>
-        </tr>
-        <tr>
           <td>{{ playbook.pubdate | date: "%m/%Y" }}</td>
-       </tr>
-       <tr>
           <td>{{ playbook.description }}</td>
-       </tr>
+        </tr>
     {% endfor %}
   </tbody>
 </table>
