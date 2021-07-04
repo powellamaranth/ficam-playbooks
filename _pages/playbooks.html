@@ -28,74 +28,69 @@ permalink: /playbooks/
   </tbody>
 </table>
 -->
-<table id="mytable"><thead>
+<table id="table">
   <tr>
-     <th id="sl" onclick="sortTable(0,1)">S.L.</th>
-     <th id="nm">name</th>
-  </tr>
- </thead>
-<tbody>
-  <tr>
-     <td>1</td>
-     <td>Ronaldo</td>
+    <th onclick="sortTable(0)">Nummer</th>
+    <th onclick="sortTable(1)">Land</th>
+    <th onclick="sortTable(2)">Name</th>
   </tr>
   <tr>
-     <td>2</td>
-     <td>Messi</td>
+    <td>2</td>
+    <td>Rumänien</td>
+    <td>Dan</td>
   </tr>
   <tr>
-     <td>3</td>
-     <td>Ribery</td>
+    <td>1</td>
+    <td>Deutschland</td>
+    <td>Aaron</td>
   </tr>
   <tr>
-     <td>20</td>
-     <td>Bale</td>
+    <td>3</td>
+    <td>USA</td>
+    <td>Peter</td>
   </tr>
-</tbody>
- </table>
+</table>
 
 <script>
 
-function sortTable(f,n){
-	var rows = $('#mytable tbody  tr').get();
+function sortTable(n) {
+    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+    table = document.getElementById("table");
+    switching = true;
+    dir = "asc";
 
-	rows.sort(function(a, b) {
+    while (switching) {
+        switching = false;
+        rows = table.rows;
 
-		var A = getVal(a);
-		var B = getVal(b);
+        for (i = 1; i < (rows.length - 1); i++) {
+            shouldSwitch = false;
+            x = rows[i].getElementsByTagName("TD")[n];
+            y = rows[i + 1].getElementsByTagName("TD")[n];
 
-		if(A < B) {
-			return -1*f;
-		}
-		if(A > B) {
-			return 1*f;
-		}
-		return 0;
-	});
-
-	function getVal(elm){
-		var v = $(elm).children('td').eq(n).text().toUpperCase();
-		if($.isNumeric(v)){
-			v = parseInt(v,10);
-		}
-		return v;
-	}
-
-	$.each(rows, function(index, row) {
-		$('#mytable').children('tbody').append(row);
-	});
+            if (dir == "asc") {
+                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
+            } else if (dir == "desc") {
+                if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
+            }
+        }
+        if (shouldSwitch) {
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            switchcount ++;
+        } else {
+            if (switchcount == 0 && dir == "asc") {
+                dir = "desc";
+                switching = true;
+            }
+        }
+    }
 }
-var f_sl = 1;
-var f_nm = 1;
-$("#sl").click(function(){
-    f_sl *= -1;
-    var n = $(this).prevAll().length;
-    sortTable(f_sl,n);
-});
-$("#nm").click(function(){
-    f_nm *= -1;
-    var n = $(this).prevAll().length;
-    sortTable(f_nm,n);
-});
 
 </script>
