@@ -6,7 +6,7 @@ permalink: /playbooks/
 
 <p>A playbook is a comprehensive guide on a technical topic, describing both overarching strategy and tactical approaches. The below table is sorted by title.</p>
 
-<table class="usa-table--borderless playbooks-table">
+<table class="usa-table--borderless playbooks-table" id="mytable">
   <thead class="usa-sr-only">
     <tr>
       <th id="playbooks-table-heading-title" scope="col">Title</th>
@@ -25,5 +25,33 @@ permalink: /playbooks/
           <td>{{ playbook.description }}</td>
         </tr>
     {% endfor %}
+
+    <table id="mytable"><thead>
+      <tr>
+         <th id="sl">S.L.</th>
+         <th id="nm">name</th>
+      </tr>
+     </thead>
+    <tbody>
+      <tr>
+         <td>1</td>
+         <td>Ronaldo</td>
+      </tr>
+      <tr>
+         <td>2</td>
+         <td>Messi</td>
+      </tr>
+      <tr>
+         <td>3</td>
+         <td>Ribery</td>
+      </tr>
+      <tr>
+         <td>20</td>
+         <td>Bale</td>
+      </tr>
+    </tbody>
+     </table>
+
+
   </tbody>
 </table>
