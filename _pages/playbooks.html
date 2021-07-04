@@ -11,7 +11,7 @@ permalink: /playbooks/
     <tr>
       <th id="playbooks-table-heading-title" scope="col">Title</th>
       <th id="playbooks-table-heading-type" scope="col">Type</th>
-      <th id="playbooks-table-heading-date" scope="col">Latest Update</th>
+      <th id="playbooks-table-heading-date" scope="col" id="sortpubdateID">Latest Update</th>
       <th id="playbooks-table-heading-description" scope="col">Description</th>
     </tr>
   </thead>
@@ -25,33 +25,51 @@ permalink: /playbooks/
           <td>{{ playbook.description }}</td>
         </tr>
     {% endfor %}
-
-    <table id="mytable"><thead>
-      <tr>
-         <th id="sl">S.L.</th>
-         <th id="nm">name</th>
-      </tr>
-     </thead>
-    <tbody>
-      <tr>
-         <td>1</td>
-         <td>Ronaldo</td>
-      </tr>
-      <tr>
-         <td>2</td>
-         <td>Messi</td>
-      </tr>
-      <tr>
-         <td>3</td>
-         <td>Ribery</td>
-      </tr>
-      <tr>
-         <td>20</td>
-         <td>Bale</td>
-      </tr>
-    </tbody>
-     </table>
-
-
   </tbody>
 </table>
+
+<script>
+
+function sortTable(f,n){
+	var rows = $('#mytable tbody  tr').get();
+
+	rows.sort(function(a, b) {
+
+		var A = getVal(a);
+		var B = getVal(b);
+
+		if(A < B) {
+			return -1*f;
+		}
+		if(A > B) {
+			return 1*f;
+		}
+		return 0;
+	});
+
+	function getVal(elm){
+		var v = $(elm).children('td').eq(n).text().toUpperCase();
+		if($.isNumeric(v)){
+			v = parseInt(v,10);
+		}
+		return v;
+	}
+
+	$.each(rows, function(index, row) {
+		$('#mytable').children('tbody').append(row);
+	});
+}
+var f_sl = 1;
+var f_nm = 1;
+$("#sl").click(function(){
+    f_sl *= -1;
+    var n = $(this).prevAll().length;
+    sortTable(f_sl,n);
+});
+$("#nm").click(function(){
+    f_nm *= -1;
+    var n = $(this).prevAll().length;
+    sortTable(f_nm,n);
+});
+
+</script>
