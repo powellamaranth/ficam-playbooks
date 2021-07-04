@@ -9,9 +9,9 @@ permalink: /playbooks/
 <table id="table">
   <thead>
     <tr>
-      <th id="playbooks-table-heading-title" scope="col" onclick="sortTable(0)">Title</th>
+      <th id="playbooks-table-heading-title" scope="col" onclick="sortTable()">Title</th>
       <th id="playbooks-table-heading-type" scope="col">Type</th>
-      <th id="playbooks-table-heading-date" scope="col"onclick="sortTable(0)">Latest Update</th>
+      <th id="playbooks-table-heading-date" scope="col"onclick="sortTable()">Latest Update</th>
       <th id="playbooks-table-heading-description" scope="col" >Description</th>
     </tr>
   </thead>
@@ -54,7 +54,7 @@ permalink: /playbooks/
 -->
 <script>
 
-function sortTable(n) {
+function sortTable() {
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
     table = document.getElementById("table");
     switching = true;
