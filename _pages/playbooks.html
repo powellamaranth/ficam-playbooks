@@ -18,34 +18,37 @@ permalink: /playbooks/
   <tbody>
     {% assign playbooks = site.playbooks | concat: site.data.external_playbooks | sort: "pubdate" | reverse %} 
     {% assign arrayTitle = '' | split: '' %}
+    {% assign arrayDate= '' | split: '' %}
 
     {% for playbook in playbooks %}
     
     {% assign arrayTitle = arrayTitle | push: playbook.title %}
+    {% assign arrayDate = arrayDate | push: playbook.pubdate %}
   
+    <tr class="playbooks-table-row">
+      <td><a href="{{ playbook.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ arrayTitle[0] }}</a></td>
+      <td>{{ playbook.type }}</td>
+      <td>{{ arrayDate[0] | date: "%m/%Y" }}</td>
+      <td>{{ playbook.description }}</td>
+    </tr>
+
+    <tr class="playbooks-table-row">
+      <td><a href="{{ playbook.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ arrayTitle[1] }}</a></td>
+      <td>{{ playbook.type }}</td>
+      <td>{{ arrayDate[1] | date: "%m/%Y" }}</td>
+      <td>{{ playbook.description }}</td>
+    </tr>
+
+    <tr class="playbooks-table-row">
+      <td><a href="{{ playbook.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ arrayTitle[2] }}</a></td>
+      <td>{{ playbook.type }}</td>
+      <td>{{ arrayDate[2] | date: "%m/%Y" }}</td>
+      <td>{{ playbook.description }}</td>
+    </tr>
 
     {% endfor %}
 
-        <tr class="playbooks-table-row">
-          <td><a href="{{ playbook.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ arrayTitle[0] }}</a></td>
-          <td>{{ playbook.type }}</td>
-          <td>{{ playbook.pubdate | date: "%m/%Y" }}</td>
-          <td>{{ playbook.description }}</td>
-        </tr>
-
-        <tr class="playbooks-table-row">
-          <td><a href="{{ playbook.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ arrayTitle[1] }}</a></td>
-          <td>{{ playbook.type }}</td>
-          <td>{{ playbook.pubdate | date: "%m/%Y" }}</td>
-          <td>{{ playbook.description }}</td>
-        </tr>
-
-        <tr class="playbooks-table-row">
-          <td><a href="{{ playbook.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ arrayTitle[2] }}</a></td>
-          <td>{{ playbook.type }}</td>
-          <td>{{ playbook.pubdate | date: "%m/%Y" }}</td>
-          <td>{{ playbook.description }}</td>
-        </tr>
+     
     
   </tbody>
 </table>
