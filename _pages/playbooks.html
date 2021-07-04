@@ -20,15 +20,17 @@ permalink: /playbooks/
     {% assign arrayTitle = '' | split: '' %}
     {% assign arrayDate= '' | split: '' %}
 
+    {% assign counter = 0 -%}
     {% for playbook in playbooks %}
     
     {% assign arrayTitle = arrayTitle | push: playbook.title %}
     {% assign arrayDate = arrayDate | push: playbook.pubdate %}
     <tr class="playbooks-table-row"></tr>
+    
 
     {% for outputTitle in arrayTitle %}
-    <td><a href="{{ playbook.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{cycle outputTitle }}</a></td>
- 
+    <td><a href="{{ playbook.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ outputTitle }}</a></td>
+    {% assign counter = outputTitle | plus: 1 %}
     {%endfor%}
     
   
