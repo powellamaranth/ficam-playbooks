@@ -26,18 +26,21 @@ permalink: /playbooks/
     {% assign arrayDate = arrayDate | push: playbook.pubdate %}
     {%endfor%}
 
-    {% for playbook in playbooks %}
+    {%  playbook2 = playbook | concat: arrayTitle | concat:ArrayDate %}
+
+    {% For i in playbook2 %}
+
 
       
         <tr class="playbooks-table-row"></tr>
       
-          <td><a href="{{ playbook.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ arrayTitle }}</a></td>
+          <td><a href="{{ playbook.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ i.arrayTitle }}</a></td>
        
-          <td>{{ playbook.type }}</td>
+          <td>{{ i.playbook.type }}</td>
         
-          <td>{{ arrayDate | date: "%m/%Y" }}</td>
+          <td>{{ i.arrayDate | date: "%m/%Y" }}</td>
        
-          <td>{{ playbook.description }}</td>
+          <td>{{ i.playbook.description }}</td>
         </tr>
 
        
