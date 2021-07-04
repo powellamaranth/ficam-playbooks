@@ -21,7 +21,7 @@ permalink: /playbooks/
 
     {% for playbook in playbooks %}
     
-    {% assign arrayTitle = playbook.title | push %}
+    {% assign arrayTitle = arrayTitle | playbook.title | push %}
   
 
     {% endfor %}
