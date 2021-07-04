@@ -17,14 +17,14 @@ permalink: /playbooks/
   </thead>
   <tbody>
     {% assign playbooks = site.playbooks | concat: site.data.external_playbooks | sort: "pubdate" | reverse %} 
-    {% for playbook in playbooks %}
+    <!--{% for playbook in playbooks %}-->
         <tr class="playbooks-table-row">
-          <td><a href="{{ playbook.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ playbook.title }}</a></td>
-          <td>{{ playbook.type }}</td>
-          <td>{{ playbook.pubdate | date: "%m/%Y" }}</td>
-          <td>{{ playbook.description }}</td>
+          <td><a href="{{ playbook.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ playbooks.title[0] }}</a></td>
+          <td>{{ playbooks.type[0] }}</td>
+          <td>{{ playbooks.pubdate[0] | date: "%m/%Y" }}</td>
+          <td>{{ playbooks.description[0] }}</td>
         </tr>
-    {% endfor %}
+   <!--{% for playbook in playbooks %} {% endfor %}-->
   </tbody>
 </table>
 
