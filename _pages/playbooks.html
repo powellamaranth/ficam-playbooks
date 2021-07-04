@@ -1,3 +1,5 @@
+
+  
 ---
 layout: page
 title: FICAM Playbooks
@@ -6,38 +8,29 @@ permalink: /playbooks/
 
 <p>A playbook is a comprehensive guide on a technical topic, describing both overarching strategy and tactical approaches. The below table is sorted by title.</p>
 
-<table id="mytable">
+<table class="usa-table--borderless playbooks-table">
   <thead>
     <tr>
-      <th id="playbooks-table-heading-title" scope="col" id ="sorttitle "onclick="sortTable(1,0)">Title</th>
+      <th id="playbooks-table-heading-title" scope="col" >Title</th>
       <th id="playbooks-table-heading-type" scope="col">Type</th>
-      <th id="playbooks-table-heading-date" scope="col" id="sortdate" onclick="sortTable(1,2)">Latest Update</th>
-      <th id="playbooks-table-heading-description" scope="col" >Description</th>
+      <th id="playbooks-table-heading-date" scope="col" id="sl" sortTable=(1,2)>Latest Update</th>
+      <th id="playbooks-table-heading-description" scope="col">Description</th>
     </tr>
   </thead>
   <tbody>
-    {% assign playbooks = site.playbooks | concat: site.data.external_playbooks | sort: "pubdate" | reverse %} 
+    {% assign playbooks = site.playbooks | concat: site.data.external_playbooks | sort: "title" %}
     {% for playbook in playbooks %}
-    
-        <tr class="playbooks-table-row"></tr>
-      
+        <tr class="playbooks-table-row">
           <td><a href="{{ playbook.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ playbook.title }}</a></td>
-       
           <td>{{ playbook.type }}</td>
-        
-          <td>{{ playbook.pubdate| date: "%m/%Y" }}</td>
-       
+          <td>{{ playbook.pubdate }}</td>
           <td>{{ playbook.description }}</td>
-        
         </tr>
-
-  {% endfor %}
-  
+    {% endfor %}
   </tbody>
 </table>
 
 <script>
-
 function sortTable(f,n){
 	var rows = $('#mytable tbody  tr').get();
 
@@ -69,14 +62,15 @@ function sortTable(f,n){
 }
 var f_sl = 1;
 var f_nm = 1;
-$("#sortdate").click(function(){
+$("#sl").click(function(){
     f_sl *= -1;
     var n = $(this).prevAll().length;
     sortTable(f_sl,n);
 });
-$("#sorttitle").click(function(){
+$("#nm").click(function(){
     f_nm *= -1;
     var n = $(this).prevAll().length;
     sortTable(f_nm,n);
 });
+
 </script>
