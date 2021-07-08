@@ -5,38 +5,117 @@
 
 - category: Laws
   shortname: The Privacy Act
-  longname: The Privacy Act of 1974
+  longname: The Privacy Act of 1974 (September 2015)
   playbook: PM, Arch
   url: http://www.gpo.gov/fdsys/pkg/USCODE-2012-title5/pdf/USCODE-2012-title5-partI-chap5-subchapII-sec552a.pdf
   description: This Act protects certain Federal Government records pertaining to individuals. In particular, the Act covers systems of records that an agency maintains and retrieves by an individual’s name or other personal identifier, such as a Social Security Number.
 
   shortname: FISMA
-  longname: Federal Information Security Modernization Act (FISMA) of 2014 
+  longname: Federal Information Security Modernization Act (FISMA) of 2014 (December 2014)
   playbook: Arch
   url: http://www.gpo.gov/fdsys/pkg/PLAW-113publ283
   description: This Act provides a framework for measuring the effectiveness of federal information systems, and it calls for the development and implementation of continuous monitoring oversight mechanisms. It also acknowledges federal agencies should take advantage of commercially-available security products (including software, hardware, etc.) that often provide robust information security solutions.
 
   shortname: E-Gov Act
-  longname: E-Government Act of 2002 
+  longname: E-Government Act of 2002 (December 2002)
   playbook: Arch
   url: https://www.gpo.gov/fdsys/pkg/PLAW-107publ347/html/PLAW-107publ347.htm
   description: This Act enhances the management and promotion of electronic federal services and processes by establishing a Federal CIO within the Office of Management and Budget (OMB) and by establishing a broad framework of measures that require using Internet-based information technology (IT) to enhance citizen access to government information and services, and for other purposes. 
 
   shortname: ESIGN Commerce Act
-  longname: Electronic Signatures in Global and National (ESIGN) Commerce Act of 2000 
+  longname: Electronic Signatures in Global and National (ESIGN) Commerce Act of 2000 (June 2000)
   playbook: Arch
   url: https://www.gpo.gov/fdsys/pkg/PLAW-106publ229/html/PLAW-106publ229.htm
   description: This Act facilitates the use of electronic records and electronic signatures in interstate and foreign commerce by ensuring the validity and legal effect of electronic contracts.
 
   shortname: GPEA
-  longname: Government Paperwork Elimination Act of 1998 (GPEA) 
+  longname: Government Paperwork Elimination Act of 1998 (GPEA) (October 1998)
   playbook: Arch
   url: https://www.gpo.gov/fdsys/pkg/PLAW-105publ277/html/PLAW-105publ277.htm
   description: This Act requires federal agencies to allow individuals or entities that deal with the agencies the option to submit information or transact with the agency electronically when possible, and to maintain records electronically when possible. This Act specifically states that electronic records and their related electronic signatures cannot be denied legal effect, validity, or enforceability just because they are in electronic form. This Act also encourages Federal Government use of a range of electronic signature alternatives.
+
+- category: Policies
+  shortName: OPM Memo: Temp Procedures for Personnel Vetting and Appointment of New Employees during COVID-19 (March 2020)
+  longName: Office of Personnel Management Memorandum: Temporary Procedures for Personnel Vetting and Appointment of New Employees during Maximum Telework Period due to Coronavirus COVID-19
+  playbook: Arch
+  url: https://www.opm.gov/policy-data-oversight/covid-19/temporary-procedures-for-personnel-vetting-and-appointment-of-new-employees-during-maximum-telework-period-due-to-coronavirus-covid-19/
+  description: Temporary. This memorandum sets forth temporary procedures for the vetting and appointment of federal personnel, collection of biometrics for federal employment, and employment authorization and eligibility. 
+
+  shortName: OMB M-20-19
+  longName: OMB M-20-19: Harnessing Technology to Support Mission Continuity (PDF, March 2020)
+  playbook: Arch
+  url: https://www.whitehouse.gov/wp-content/uploads/2020/03/M-20-19.pdf
+  description: Temporary. This memorandum directs that agencies utilize technology to the greatest extent practicable to support mission continuity during the national emergency. By aggressively embracing technology to support business processes, the Federal Government is better positioned to maintain the safety and well-being of the Federal workforce and the American public while supporting the continued delivery of vital mission services. The set of frequently asked questions are intended to provide additional guidance and further assist the IT workforce as it addresses impacts.
+
+  shortName: OMB M-19-17
+  longName: OMB M-19-17: Enabling Mission Delivery through Improved Identity, Credential, and Access Management (ICAM) (PDF, May 2019)
+  playbook: Arch
+  url: https://www.whitehouse.gov/wp-content/uploads/2019/05/M-19-17.pdf
+  description: This memorandum sets forth the Federal Government’s ICAM policy. To ensure secure and efficient operations, agencies of the Federal Government must be able to identify, credential, monitor, and manage subjects that access Federal resources. This includes information, information systems, facilities, and secured areas across their respective enterprises. In particular, how agencies conduct identity proofing, establish enterprise digital identities, and adopt sound processes for authentication and access control significantly affects the security and delivery of their services, as well as individuals’ privacy.
+
+  shortName: OMB M-19-03
+  longName: OMB M-19-03: Strengthening the Cybersecurity of Federal Agencies by enhancing the High Value Asset (HVA) Program (PDF, December 2018)
+  playbook: Arch
+  url: https://www.whitehouse.gov/wp-content/uploads/2018/12/M-19-03.pdf
+  description: With the creation of the HVA initiative in 2015, the Federal Government’s CFO Act agencies took a pivotal step toward the identification of its most critical assets. DHS, in coordination with OMB, established a capability to assess agency HVAs, resulting in the identification of critical areas of weakness and plans to remediate those areas of weakness. It established three possible categories for designating Federal information or a Federal information system as an HVA: Informational Value, Mission Essential, or Federal Civilian Enterprise Essential (FCEE). It also updates the required approach for agencies to report, assess, and remediate HVAs to protect against cyberattacks. 
+
+  shortName: Executive Order 13833
+  longName: Executive Order 13833: Enhancing the Effectiveness of Agency Chief Information Officers (CIOs) (May 2018)
+  playbook: Arch
+  url: https://www.federalregister.gov/documents/2018/05/18/2018-10855/enhancing-the-effectiveness-of-agency-chief-information-officers
+  description: This executive order authorizes federal agency CIOs to ensure that agency IT systems are as modern, secure, and well-managed as possible to reduce costs, mitigate cybersecurity risks, and deliver improved services to the American people.
+
+  shortName: Executive Order 13800
+  longName: Executive Order 13800: Strengthening the Cybersecurity of Federal Networks and Critical Infrastructure (May 2017)
+  playbook: Arch
+  url: https://www.federalregister.gov/documents/2017/05/16/2017-10004/strengthening-the-cybersecurity-of-federal-networks-and-critical-infrastructure
+  description: This executive order places an emphasis on modernizing and securing federal networks and critical infrastructure from the ever-growing threat of cyber-attacks.
+
+  shortName: OMB Circular A-108
+  longName: OMB Circular A-108, Federal Agency Responsibilities for Review, Reporting, and Publication under the Privacy Act (December 2016)
+  playbook: Arch
+  url: https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A108/omb_circular_a-108.pdf
+  description: This circular describes agency responsibilities for implementing the review, reporting, and publication requirements of the Privacy Act of 1974 and related OMB policies.
+
+  shortName: OMB Circular A-130
+  longName: OMB Circular A-130: Managing Federal Information as a Strategic Resource (PDF, July 2016)
+  playbook: Arch
+  url: https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf
+  description: Information and IT resources are critical to the U.S. social, political, and economic well-being. They enable the Federal Government to provide quality services to citizens, generate and disseminate knowledge, and facilitate greater productivity and advancement as a Nation. It is important for the Federal Government to maximize the quality and security of federal information systems, and to develop and implement uniform and consistent information resources management policies in order to inform the public and improve the productivity, efficiency, and effectiveness of agency programs. Additionally, as technology evolves, it is important that agencies manage information systems in a way that addresses and mitigates security and privacy risks associated with new IT resources and new information processing capabilities.
+
+  shortName:  M-16-17: OMB Circular A-123
+  longName: M-16-17: OMB Circular A-123: Management’s Responsibility for Enterprise Risk Management (ERM) and Internal Control (July 2016)
+  playbook: Arch
+  url: https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/memoranda/2016/m-16-17.pdf
+  description: The policy changes in this circular modernize existing efforts by requiring agencies to implement an ERM capability coordinated with the strategic planning and strategic review process established by Government Performance and Results Act Modernization Act (GPRAMA), and the internal control processes required by Federal Managers’ Financial Integrity Act (FMFIA) and Government Accountability Office (GAO)’s Green Book. This integrated governance structure will improve mission delivery, reduce costs, and focus corrective actions towards key risks.
+
+  shortName:  Executive Order 13681
+  longName: Executive Order 13681: Improving the Security of Consumer Financial Transactions (PDF, October 2014)
+  playbook: Arch
+  url: https://www.gpo.gov/fdsys/pkg/FR-2014-10-23/pdf/2014-25439.pdf
+  description: This executive order requires agencies to strengthen the security of consumer data and encourage the adoption of enhanced safeguards nationwide in a manner that protects privacy and confidentiality while maintaining an efficient and innovative financial system.
+
+  shortName:  Final Credentialing Standards for Issuing PIV Cards
+  longName: Final Credentialing Standards for Issuing Personal Identity Verification (PIV) Cards under HSPD-12 (PDF, July 2008)
+  playbook: Arch
+  url: https://www.opm.gov/investigations/suitability-executive-agent/policy/final-credentialing-standards.pdf
+  description: This memorandum provides final government-wide credentialing standards to be used by all federal departments and agencies in determining whether to issue or revoke PIV credentials to their employees and contractor personnel, including those who are non-United States citizens.
+
+  shortName:  OMB M-05-24
+  longName: OMB M-05-24: Implementation of HSPD-12 Policy for a Common Identification Standard for Federal Employees and Contractors (PDF, August 2005)
+  playbook: Arch
+  url: https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/memoranda/2005/m05-24.pdf
+  description: This memorandum provides implementation instructions for HSPD-12 and Federal Information Processing Standards (FIPS) 201. 
+
+  shortName:  HSPD-12
+  longName: HSPD-12: Policy for a Common Identification Standard for Federal Employees and Contractors (August 2004)
+  playbook: Arch
+  url: http://www.dhs.gov/homeland-security-presidential-directive-12
+  description: HSPD-12 calls for a mandatory, government-wide standard for secure and reliable forms of identification issued by the Federal Government to its employees and employees of federal contractors for access to federally-controlled facilities and networks.
 
 - category: Standards
   shortName: NIST SP 800-116 Rev. 1
   longName: NIST SP 800-116r1 Guidelines for the Use of PIV Credentials in Facility Access
   playbook: PACS
-  uRL: https://csrc.nist.gov/publications/detail/sp/800-116/rev-1/final
+  url: https://csrc.nist.gov/publications/detail/sp/800-116/rev-1/final
   description: This guideline provides resources for using PIV credentials in facility access; enabling federal agencies to operate as government-wide interoperable enterprises. This guideline covers the risk-based strategy to select appropriate PIV authentication mechanisms as expressed within FIPS 201.
