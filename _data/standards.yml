@@ -6,9 +6,33 @@
 - category: Laws
   shortname: The Privacy Act
   longname: The Privacy Act of 1974
-  playbook: PM
+  playbook: PM, Arch
   url: http://www.gpo.gov/fdsys/pkg/USCODE-2012-title5/pdf/USCODE-2012-title5-partI-chap5-subchapII-sec552a.pdf
   description: This Act protects certain Federal Government records pertaining to individuals. In particular, the Act covers systems of records that an agency maintains and retrieves by an individual’s name or other personal identifier, such as a Social Security Number.
+
+  shortname: FISMA
+  longname: Federal Information Security Modernization Act (FISMA) of 2014 
+  playbook: Arch
+  url: http://www.gpo.gov/fdsys/pkg/PLAW-113publ283
+  description: This Act provides a framework for measuring the effectiveness of federal information systems, and it calls for the development and implementation of continuous monitoring oversight mechanisms. It also acknowledges federal agencies should take advantage of commercially-available security products (including software, hardware, etc.) that often provide robust information security solutions.
+
+  shortname: E-Gov Act
+  longname: E-Government Act of 2002 
+  playbook: Arch
+  url: https://www.gpo.gov/fdsys/pkg/PLAW-107publ347/html/PLAW-107publ347.htm
+  description: This Act enhances the management and promotion of electronic federal services and processes by establishing a Federal CIO within the Office of Management and Budget (OMB) and by establishing a broad framework of measures that require using Internet-based information technology (IT) to enhance citizen access to government information and services, and for other purposes. 
+
+  shortname: ESIGN Commerce Act
+  longname: Electronic Signatures in Global and National (ESIGN) Commerce Act of 2000 
+  playbook: Arch
+  url: https://www.gpo.gov/fdsys/pkg/PLAW-106publ229/html/PLAW-106publ229.htm
+  description: This Act facilitates the use of electronic records and electronic signatures in interstate and foreign commerce by ensuring the validity and legal effect of electronic contracts.
+
+  shortname: GPEA
+  longname: Government Paperwork Elimination Act of 1998 (GPEA) 
+  playbook: Arch
+  url: https://www.gpo.gov/fdsys/pkg/PLAW-105publ277/html/PLAW-105publ277.htm
+  description: This Act requires federal agencies to allow individuals or entities that deal with the agencies the option to submit information or transact with the agency electronically when possible, and to maintain records electronically when possible. This Act specifically states that electronic records and their related electronic signatures cannot be denied legal effect, validity, or enforceability just because they are in electronic form. This Act also encourages Federal Government use of a range of electronic signature alternatives.
 
 - category: Standards
   shortName: NIST SP 800-116 Rev. 1
