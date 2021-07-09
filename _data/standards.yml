@@ -156,6 +156,12 @@
   url: https://csrc.nist.gov/publications/detail/sp/800-73/4/final
   description: This guideline specifies the PIV data model, command interface, client application programming interface (API), and references to transitional interface specifications.
 
+  shortName: NIST SP 800-76-2
+  longName: NIST SP 800-76-2: Biometric Data Specification for PIV (PDF, July 2013)
+  playbook: Arch
+  url: https://csrc.nist.gov/publications/detail/sp/800-76/2/final
+  description: This guideline contains technical specifications for biometric data mandated in FIPS. These specifications reflect the design goals of interoperability and performance of the PIV credential. This specification addresses image acquisition to support the background check, fingerprint template creation, retention, and authentication. The biometric data specification in this document is the mandatory format for biometric data carried in the PIV Data Model (SP 800-73-1, Appendix A). Biometric data used only outside the PIV Data Model is not within the scope of this standard. 
+
   shortName: NIST SP 800-79-2
   longName: NIST SP 800-79-2: Guidelines for the Authorization of PIV Card Issuers (PCI) and Derived PIV Credential Issuers (DPCI) (PDF, July 2015)
   playbook: Arch
@@ -168,11 +174,23 @@
   url: https://csrc.nist.gov/publications/detail/sp/800-116/rev-1/final
   description: This guideline provides resources for using PIV credentials in facility access; enabling federal agencies to operate as government-wide interoperable enterprises. This guideline covers the risk-based strategy to select appropriate PIV authentication mechanisms as expressed within FIPS 201.
 
+  shortName: NIST SP 800-122
+  longName: NIST SP 800-122: Guide for Protecting the Confidentiality of Personally Identifiable Information (PII) (PDF. April 2010)
+  playbook: PACS, Arch
+  url: https://csrc.nist.gov/publications/detail/sp/800-122/final
+  description: This guideline assists federal agencies in protecting the confidentiality of a specific category of data commonly known as PII. This document provides practical, context-based guidance for identifying PII and determining what level of protection is appropriate for each instance of PII. The document also suggests safeguards that may offer appropriate levels of protection for PII and provides recommendations for developing response plans for breaches involving PII.
+
   shortName: NIST SP 800-157
   longName: NIST SP 800-157: Guidelines for Derived PIV Credentials (PDF, December 2014)
   playbook: Arch
   url: https://csrc.nist.gov/publications/detail/sp/800-157/final
   description: This guideline provides technical instructions for the implementation of standards-based, secure, reliable, interoperable public key infrastructure (PKI) based identity credentials that are issued by federal departments and agencies to individuals who possess and prove control over a valid PIV credential.
+
+  shortName: NIST SP 800-162
+  longName: NIST SP 800-162: Guide to Attribute Based Access Control (ABAC) Definition and Considerations (PDF, January 2014)
+  playbook: Arch
+  url: https://csrc.nist.gov/publications/detail/sp/800-162/final
+  description: This guideline provides federal agencies with a definition of ABAC. ABAC is a logical access control methodology where authorization to perform a set of operations is determined by evaluating attributes associated with the subject, object, requested operations, and, in some cases, environment conditions against policy, rules, or relationships that describe the allowable operations for a given set of attributes.
 
   shortName: NIST SP 800-205
   longName: NIST SP 800-205: Attribute Considerations for Access Control Systems (PDF, June 2019)
@@ -180,8 +198,52 @@
   url: https://csrc.nist.gov/publications/detail/sp/800-205/final
   description: This guideline provides federal agencies with information for implementing attributes in access control systems. Attributes enable a logical access control methodology where authorization to perform a set of operations is determined by evaluating attributes associated with the subject, object, requested operations, and, in some cases, environment conditions against policy, rules, or relationships that describe the allowable operations for a given set of attributes. This document outlines factors which influence attributes that an authoritative body must address when standardizing an attribute system and proposes some notional implementation suggestions for consideration.
   
+  shortName: FIPS 201-2
+  longName: FIPS 201-2: PIV of Federal Employees and Contractors (PDF, August 2013)
+  playbook: Arch
+  url: https://csrc.nist.gov/publications/detail/fips/201/2/final
+  description: This standard specifies the architecture and technical requirements for a common identification standard for federal employees and contractors. The overall goal is to achieve appropriate security assurance for multiple applications by efficiently verifying the claimed identity of individuals seeking physical access to federally controlled government facilities and electronic access to government information systems.
   
+- category: Other
+  shortname: NIST FISMA Implementation Project
+  longname: NIST FISMA Implementation Project: Risk Management Framework Overview (August 2020)
+  playbook: Arch
+  url: https://csrc.nist.gov/projects/risk-management/rmf-overview
+  description: The selection and specification of security controls for a system is accomplished as part of an organization-wide information security program that involves the management of organizational risk—that is, the risk to the organization or to individuals associated with the operation of a system. The management of organizational risk is a key element in the organization’s information security program and provides an effective framework for selecting the appropriate security controls for a system—the security controls necessary to protect individuals and the operations and assets of the organization.
   
+  shortname: NIST SP 800-63 FAQs
+  longname: NIST SP 800-63 Frequently Asked Questions (FAQs) (July 2020)
+  playbook: Arch
+  url: https://pages.nist.gov/800-63-FAQ/
+  description: The Frequently Asked Questions for NIST SP 800-63-3, Digital Identity Guidelines answers recurring questions to provide additional clarification.
   
+  shortname: NIST SP 800-63-3 Implementation Resources
+  longname: NIST SP 800-63-3 Implementation Resources (PDF, July 2020)
+  playbook: Arch
+  url: https://www.nist.gov/system/files/documents/2020/07/02/SP-800-63-3-Implementation-Resources_07012020.pdf
+  description: These resources are intended as informative implementation guidance for NIST SP 800-63-3. These implementation resources provide guidance for SP 800-63-3 in three parts: Part A addresses SP 800-63A, Part B addresses SP 800-63B, and Part C addresses SP 800-63C.
   
-  
+  shortname: NIST Privacy Framework
+  longname: NIST: Privacy Framework (PDF, January 2020)
+  playbook: Arch
+  url: https://www.nist.gov/privacy-framework/new-framework
+  description: The Privacy Framework is a voluntary tool intended to help organizations identify and manage privacy risk to build innovative products and services while protecting individuals’ privacy. The Privacy Framework approach to privacy risk is to consider privacy events as potential problems individuals could experience arising from system, product, or service operations with data, whether in digital or non-digital form, through a complete life cycle from data collection through disposal.
+
+  shortname: Best Practices for Privileged User PIV Authentication
+  longname: NIST White Paper: Best Practices for Privileged User PIV Authentication (PDF, April 2016)
+  playbook: Arch
+  url: https://csrc.nist.gov/publications/detail/white-paper/2016/04/21/best-practices-for-privileged-user-piv-authentication/final
+  description: This white paper was developed in response to the Cybersecurity Strategy and Implementation Plan to explain the need for multi-factor PIV-based user authentication for privileged users. It provides best practices for agencies implementing PIV authentication for privileged users. Continuous Diagnostics and Mitigation
+
+  shortname: CDM Program
+  longname: The Continuous Diagnostics and Mitigation (CDM) Program
+  playbook: Arch
+  url: https://www.cisa.gov/cdm
+  description: The Continuous Diagnostics and Mitigation (CDM) Program is an approach to fortifying the cybersecurity of government networks and systems. The CDM Program provides cybersecurity tools, integration services, and dashboards to participating agencies to support them in improving their respective security posture. The CDM approach focuses on five areas for the federal enterprise: Data Protection Management, Network Security Management, Identity and Access Management, Asset Management, and Monitoring and Dashboards.
+
+  shortname: Application Rationalization Playbook
+  longname: Application Rationalization Playbook (PDF, June 2019)
+  playbook: Arch
+  url: https://www.cio.gov/assets/files/Application-Rationalization-Playbook.pdf
+  description: This playbook is a practical guide for application rationalization and IT portfolio management under the Federal Government’s Cloud Smart initiatives. Application rationalization will help federal agencies mature IT portfolio management capabilities, empower leaders to make informed decisions, and improve the delivery of key mission and business services. It requires buy-in from stakeholders across the enterprise, including senior leaders, technology staff members, cybersecurity experts, business leads, financial practitioners, acquisition and procurement experts, and end user communities. Rationalization efforts rely on leadership support and continual engagement with stakeholders to deliver sustainable change.
+ 
