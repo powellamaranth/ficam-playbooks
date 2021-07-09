@@ -1,6 +1,6 @@
 # List of all relevant standards and policies
 
-# categories: Laws, Standards, Policies, Guidance, Other
+# categories: Laws, Standards, Policies, Regulation, Guidance, Other
 # topic (applicable pages): Arch, FPKI, PACS, PIV, PM
 
 - category: Laws
@@ -120,9 +120,39 @@
   description: Temporary. This memorandum sets forth temporary procedures for the vetting and appointment of federal personnel, collection of biometrics for federal employment, and employment authorization and eligibility. 
     
 - category: Standards
+  shortName: FICAM Roadmap
+  longName: Federal Identity, Credential, and Access Management (FICAM) Roadmap and Implementation Guidance, Version 2.0, Executive Office of the President (EOP) and Federal Chief Information Officers (CIO) Council, December 2, 2011.
+  playbook: PACS
+  url: https://playbooks.idmanagement.gov/docs/roadmap-ficam.pdf
+  description: The FICAM Roadmap, developed by the federal CIO Council, contains processes, procedures, and considerations for planning and managing logical access, physical access, identity management, and federation within federal agencies. 
+ 
+  shortName: FIPS 199
+  longName: FIPS PUB 200, Minimum Security Requirements for Federal Information and Information Systems, NIST, March 9, 2006.
+  playbook: PACS
+  url: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.199.pdf
+  description: FIPS 199 establishes security categories of information systems used by the Federal Government, one component of risk assessment. FIPS 199 and FIPS 200 are mandatory security standards as required by FISMA.
+ 
+  shortName: FIPS 200
+  longName: FIPS PUB 200, Minimum Security Requirements for Federal Information and Information Systems, NIST, March 9, 2006.
+  playbook: PACS
+  url: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.200.pdf
+  description: FIPS 200 specifies the minimum security requirements for non-military federal information systems. It implements the authority given to NIST (US National Institute of Science and Technology) by the Federal Information Security Management Act of 2014.
+ 
+  shortName: FIPS 201-2
+  longName: FIPS 201-2, Personal Identity Verification (PIV) of Federal Employees and Contractors, NIST, August 2013
+  playbook: PACS
+  url: http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.201-2.pdf
+  description: FIPS
+ 
+  shortName: FPKI Security Controls Overlay
+  longName: Federal Public Key Infrastructure (FPKI) Security Controls Overlay of Special Publication 800-53 Security Controls for PKI Systems, Version 3.0, February 26, 2021.
+  playbook: PACS
+  url: https://playbooks.idmanagement.gov/docs/fpki-overlay-800-53.pdf
+  description: This overlay covers only PKI-relevant controls, and does not replace other controls, requirements, or overlays, as applicable. All PKIs participating in the FPKI should use this overlay and apply each control as specified to realize its full benefit.
+ 
   shortName: NIST SP 800-53 Rev. 4
   longName: NIST SP 800-53 Rev. 4: Security and Privacy Controls for Federal Information Systems and Organizations (PDF, January 2015)
-  playbook: Arch
+  playbook: Arch, PACS
   url: https://csrc.nist.gov/publications/detail/sp/800-53/rev-4/final
   description: This guideline provides a catalog of security and privacy controls for federal information systems and organizations and a process for selecting controls to protect organizational operations, assets, individuals, other organizations, and the Nation from a diverse set of threats.
 
@@ -131,6 +161,18 @@
   playbook: Arch
   url: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-4/final
   description: This guideline provides a set of procedures for conducting assessments of security controls and privacy controls employed within federal information systems and organizations. The assessment procedures, executed at various phases of the system development life cycle, are consistent with the security and privacy controls in NIST SP 800-53, Revision 4.
+
+  shortName: NIST SP 800-60, Vol 1, Rev 1
+  longName: NIST SP 800-60, Volume 1, Revision 1, Guide for Mapping Types of Information and Information Systems to Security Categories, August 2008.
+  playbook: PACS
+  url: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-60v1r1.pdf
+  description: NIST SP 800-60 addresses the FISMA direction to develop guidelines recommending the types of information and information systems to be included in each category of potential security impact. This guideline is intended to help agencies consistently map security impact levels to types of: (i) information (e.g., privacy, medical, proprietary, financial, contractor sensitive, trade secret, investigation); and (ii) information systems (e.g., mission critical, mission support, administrative). 
+
+  shortName: NIST SP 800-60, Vol 2, Rev 1
+  longName: NIST SP 800-60, Volume II, Revision 1, Appendices to Guide for Mapping Types of Information and Information Systems to Security Categories, August 2008.
+  playbook: PACS
+  url: http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-60v2r1.pdf
+  description: The appendices contained in Volume II include security categorization recommendations and rationale for mission-based and management and support information types.
 
   shortName: NIST SP 800-63-3
   longName: NIST SP 800-63-3: Digital Identity Guidelines (June 2017)
@@ -158,7 +200,7 @@
 
   shortName: NIST SP 800-73-4
   longName: NIST SP 800-73-4: Interfaces for PIV (PDF, February 2016)
-  playbook: PIV, Arch
+  playbook: PIV, PACS, Arch
   url: https://csrc.nist.gov/publications/detail/sp/800-73/4/final
   description: This guideline specifies the PIV data model, command interface, client application programming interface (API), and references to transitional interface specifications.
 
@@ -198,6 +240,12 @@
   url: https://csrc.nist.gov/publications/detail/sp/800-162/final
   description: This guideline provides federal agencies with a definition of ABAC. ABAC is a logical access control methodology where authorization to perform a set of operations is determined by evaluating attributes associated with the subject, object, requested operations, and, in some cases, environment conditions against policy, rules, or relationships that describe the allowable operations for a given set of attributes.
 
+  shortName: NIST SP 800-171
+  longName: NIST SP 800-171, Revision 2, Protecting Controlled Unclassified Information in Nonfederal Information Systems and Organizations, February 2020.
+  playbook: PACS
+  url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-171r2.pdf
+  description: This guideline provides federal agencies with recommended security requirements6 for protecting the confidentiality of CUI: (1) when the CUI is resident in a nonfederal system and organization; (2) when the nonfederal organization is not collecting or maintaining information on behalf of a federal agency or using or operating a system on behalf of an agency;7 and (3) where there are no specific safeguarding requirements for protecting the confidentiality of CUI prescribed by the authorizing law, regulation, or governmentwide policy for the CUI category listed in the CUI Registry.
+
   shortName: NIST SP 800-205
   longName: NIST SP 800-205: Attribute Considerations for Access Control Systems (PDF, June 2019)
   playbook: Arch
@@ -206,12 +254,19 @@
   
   shortName: FIPS 201-2
   longName: FIPS 201-2: PIV of Federal Employees and Contractors (PDF, August 2013)
-  playbook: PIV, Arch
+  playbook: PIV, , PACS, Arch
   url: https://csrc.nist.gov/publications/detail/fips/201/2/final
   description: This standard specifies the architecture and technical requirements for a common identification standard for federal employees and contractors. The overall goal is to achieve appropriate security assurance for multiple applications by efficiently verifying the claimed identity of individuals seeking physical access to federally controlled government facilities and electronic access to government information systems.
   
+- category: Regulations
+  shortname: FAR
+  longname: Federal Acquisition Regulation (FAR)
+  playbook: PACS
+  url: https://www.acquisition.gov/browsefar
+  description: The Federal Acquisition Regulation is the principal set of rules regarding government procurement in the United States, and is codified at Chapter 1 of Title 48 of the Code of Federal Regulations, 48 CFR 1. It covers many of the contracts issued by the US military and NASA, as well as US civilian federal agencies.
+  
 - category: Other
-   shortname: Application Rationalization Playbook
+  shortname: Application Rationalization Playbook
   longname: Application Rationalization Playbook (PDF, June 2019)
   playbook: Arch
   url: https://www.cio.gov/assets/files/Application-Rationalization-Playbook.pdf
